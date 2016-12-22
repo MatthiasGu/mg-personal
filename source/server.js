@@ -21,7 +21,6 @@ db = mongoose.connect('mongodb://mgudenas:123123@ds141358.mlab.com:41358/mg-webs
 
 // Setup routes
 var routes = require('./app/routes/routes.js')(io, app);
-var sockets = require('./app/sockets/sockets.js')(io);
 
 server.listen(port, function () {
     console.log('Website is listening on port 3000!');
