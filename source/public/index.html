@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal website of Motiejus Gudenas">
+    <meta name="author" content="Motiejus Gudenas">
+    <link rel="icon" href="./assets/images/icon.png">
+    <title>Motiejus Gudenas</title>
+    <link href="./lib.min.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body ng-app="mgApp">
+
+<div ng-include="'./modules/navbar/navbar.html'"></div>
+
+<div id="view-body" class="container-fluid">
+    <div class="animated fadeIn" ng-view></div>
+</div>
+
+<script src="socket.io/socket.io.js"></script>
+<script src="./lib.min.js" type="text/javascript"></script>
+<script src="./app.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
+
+</body>
+
+</html>
