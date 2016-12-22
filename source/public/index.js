@@ -7,7 +7,7 @@ var app = angular.module("mgApp", [
     'ngCookies'
 ]);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'modules/home/home.html',
@@ -16,5 +16,7 @@ app.config(function ($routeProvider) {
         .otherwise({
             redirectTo: '/'
         });
+
+    $locationProvider.html5Mode(true);
 });
 
