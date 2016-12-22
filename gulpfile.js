@@ -146,11 +146,12 @@ gulp.task('gen-lib-js', function () {
 
 gulp.task('gen-app-js', function () {
     return gulp.src([
+        'source/public/index.js',
         'source/public/services/*.js',
         'source/public/factories/*.js',
+        'source/public/factories/**/*.js',
         'source/public/directives/directives.js',
         'source/public/filters/filters.js',
-        'source/public/index.js',
         'source/public/modules/**/*.js',
         'source/public/modules/**/!.test.js',
         'source/public/model/*.js'
