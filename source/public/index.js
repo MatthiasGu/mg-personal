@@ -10,7 +10,7 @@ var app = angular.module("mgApp", [
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'modules/home/home.html',
+            templateUrl: './modules/home/home.html',
             controller: 'HomeController'
         })
         .otherwise({
