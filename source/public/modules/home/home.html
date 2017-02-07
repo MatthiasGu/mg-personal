@@ -6,4 +6,28 @@
     <div id="right-index-col">
         <p> Yello! </p>
     </div>
+
+
+    <button ng-click="getData()">Test</button>
+
+    <table id="analytics-table" class="table table-striped table-bordered table-hover" ng-show="searchResults.length > 0" class="ng-hide">
+        <thead>
+            <tr>
+                <th>Account</th>
+                <th>Engagement</th>
+                <th>Resource</th>
+                <th>Net Amount</th>
+                <th>Reference</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in searchResults">
+                <td>{{item["Account"]}}</td>
+                <td>{{item["Engagement"]}}</td>
+                <td>{{item["Time Entry Resource"]}}</td>
+                <td>{{item["Net Amount (converted)"] + item["Net Amount (converted) Currency"]}}</td>
+                <td>{{item["Reference"]}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
